@@ -2,7 +2,12 @@
 export default{
     data(){
         return {
-            mensaje: "lorem"
+            nombre: null
+        }
+    },
+    watch: {
+        nombre() {
+            alert(`Se ha modificado el nombre ${this.nombre}`);
         }
     }
 }

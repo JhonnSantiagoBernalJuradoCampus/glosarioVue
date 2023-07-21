@@ -8,9 +8,8 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="mensaje">
-        <h1>{{mensaje}}</h1>
-        <strong v-text="mensaje"></strong>
+        <input type="text" v-model.lazy="nombre">
+        <p v-text="nombre"></p>
     </div>
 </body>
 </html>

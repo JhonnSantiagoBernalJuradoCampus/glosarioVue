@@ -155,11 +155,47 @@ export default{
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="mensaje">
-        <h1>{{mensaje}}</h1>
-        <strong v-text="mensaje"></strong>
+        <input type="text" v-moddel.lazy="mensaje">
+        <p v-text=""></p>
     </div>
 </body>
 </html>
 ```
-En este ejemplo podemos ver como los datos cambian dependiendo de el contenido de el input
+En este ejemplo podemos ver como los datos cambian dependiendo de el contenido de el input.
+Nota:La directiva v-model enlaza el valor de una variable con un <input>, <select>, <textarea> o un componente.
+#### lazy
+Este modificador retrasa la actualización de la propiedad vinculada hasta que se dispara el evento change en lugar del evento input. Esto es útil cuando se desea evitar que una entrada de usuario genere demasiadas actualizaciones de la vista previa.
+```js
+//my-component.js
+export default{
+    data(){
+        return {
+            nombre: null
+        }
+    },
+    watch: {
+        nombre() {
+            alert(`Se ha modificado el nombre ${this.nombre}`);
+        }
+    }
+}
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="app.js" type="module"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model.lazy="nombre">
+        <p v-text="nombre"></p>
+    </div>
+</body>
+</html>
+```
+![Ejemplo de vista](./assets/example3.png)
+Nota:La directiva v-model.lazy retrase hasta que se produzca un evento de cambio (por ejemplo, cuando se pulsa la tecla Enter o salgas del focus del input).
