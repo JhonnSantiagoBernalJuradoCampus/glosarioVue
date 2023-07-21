@@ -160,9 +160,8 @@ export default{
     </div>
 </body>
 </html>
+//En este ejemplo podemos ver como los datos cambian dependiendo de el contenido de el input. Nota:La directiva v-model enlaza el valor de una variable con un <input>, <select>, <textarea> o un componente.
 ```
-En este ejemplo podemos ver como los datos cambian dependiendo de el contenido de el input.
-Nota:La directiva v-model enlaza el valor de una variable con un `<input>`, `<select>`, `<textarea>` o un componente.
 
 ### lazy
 Este modificador retrasa la actualización de la propiedad vinculada hasta que se dispara el evento change en lugar del evento input. Esto es útil cuando se desea evitar que una entrada de usuario genere demasiadas actualizaciones de la vista previa
