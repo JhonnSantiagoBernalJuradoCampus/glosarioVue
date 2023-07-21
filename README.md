@@ -100,3 +100,35 @@ export default {
 </body>
 </html>
 ```
+### v-html
+Si quisiéramos incluir código HTML en una de esas variables, se mostrarían las etiquetas literalmente. La directiva v-html funciona exactamente igual que v-text, solo que en lugar de mostrar las etiquetas, las procesa y renderiza.
+```js
+//my-component.js
+export default {
+    data() {
+        return {
+            basico: `<strong style="color:green">Apolo</strong>`,
+            intermedio: `<strong style="color:red">Artemis</strong>`,
+            avanzado: `<strong style="color:blue">Sputnik</strong>`
+        }
+    }
+}
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="app.js" type="module"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 v-html="avanzado"></h1>
+        <h2 v-html="intermedio"></h2>
+        <h3 v-html="basico"></h3>
+    </div>
+</body>
+</html>
+```
