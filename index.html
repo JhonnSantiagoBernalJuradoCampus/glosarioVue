@@ -8,9 +8,9 @@
 </head>
 <body>
     <div id="app">
-        <h1 v-html="avanzado"></h1>
-        <h2 v-html="intermedio"></h2>
-        <h3 v-html="basico"></h3>
+        <input type="text" v-model="mensaje">
+        <h1>{{mensaje}}</h1>
+        <strong v-text="mensaje"></strong>
     </div>
 </body>
 </html>

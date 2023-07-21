@@ -132,3 +132,34 @@ export default {
 </body>
 </html>
 ```
+### v-model
+Una de las directivas básicas más interesantes es v-model. Esta directiva permite crear un modelo de datos bidireccional entre un elemento HTML concreto y una variable de Vue. ¿Qué significa esto? Significa que podemos sincronizar el contenido de una variable con el contenido que tenga un elemento HTML <input> (por ejemplo) en su atributo value.
+```js
+//my-component.js
+export default{
+    data(){
+        return {
+            mensaje: "lorem"
+        }
+    }
+}
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="app.js" type="module"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="mensaje">
+        <h1>{{mensaje}}</h1>
+        <strong v-text="mensaje"></strong>
+    </div>
+</body>
+</html>
+```
+En este ejemplo podemos ver como los datos cambian dependiendo de el contenido de el input
