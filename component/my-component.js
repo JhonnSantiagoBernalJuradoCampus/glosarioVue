@@ -1,8 +1,10 @@
-//mi-component.js
+//my-component.js
 export default {
     data() {
-        return {    
-            mensaje: "Hello World"
+        return {
+            basico: "Apolo",
+            intermedio: "Artemis",
+            avanzado: "Sputnik"
         }
     }
 }
